@@ -1,9 +1,15 @@
 numOptions = 1;
 sketchChoice = Math.floor(Math.random()*numOptions);
+console.log(sketchChoice);
 switch(sketchChoice){
   case 0:
     presetupZero();
   break;
+  case 1:
+    presetupOne();
+  break;
+  default:
+    presetupZero();
 }
 
 function setup() {
@@ -18,6 +24,11 @@ function setup() {
     case 0:
       setupZero();
     break;
+    case 1:
+      setupOne();
+    break;
+    default:
+      setupZero();
   }
 }
 
@@ -27,6 +38,11 @@ function draw() {
     case 0:
       drawZero();
     break;
+    case 1:
+      drawOne();
+    break;
+    default:
+      drawZero();
   }
 }
 
@@ -85,4 +101,19 @@ function step(_variable, threshold){
     return 1.0;
   }
   return 0.0;
+}
+
+//SKETCH ONE
+function presetupOne(){
+
+}
+
+function setupOne(){
+  stroke('#E9F1F7');
+  strokeWeight(5);
+  fill('#E9F1F7');
+}
+
+function drawOne(){
+  rect(0,0,width,height);
 }

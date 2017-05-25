@@ -6,7 +6,7 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Custom default button */
@@ -64,19 +64,39 @@ body {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+
 }
 
+.inner-cover{
+  color: #E9F1F7;
+  background-color: #584d3d;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  border-radius: 10px;
+}
 
+.main-content{
+  padding: 30px;
+  font-family: 'Averia Sans Libre', cursive;
+}
+
+.p5{
+  padding: 0px;
+}
 /*
  * Header
  */
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: 'Averia Sans Libre', cursive;
+  font-weight: bold;
 }
 
 .masthead-nav > li {
   display: inline-block;
+  font-family: 'Inconsolata', monospace;
 }
 
 .masthead-nav > li + li {
@@ -88,8 +108,8 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #E9F1F7; /* IE8 proofing */
+  color: color: #E9F1F77F;
   border-bottom: 2px solid transparent;
 }
 
