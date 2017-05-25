@@ -10,7 +10,7 @@ function setup() {
   //noStroke();
   smooth(8);
   noStroke();
-  fill('#586F7C');
+  fill('#BA1200');
 
 
   for(var i = 0; i < 3; i++){
