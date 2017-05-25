@@ -1,40 +1,76 @@
-var points = new Array;
+numOptions = 1;
+sketchChoice = Math.floor(Math.random()*numOptions);
+switch(sketchChoice){
+  case 0:
+    presetupZero();
+  break;
+}
 
 function setup() {
-  var canvas = createCanvas(150, 150);
+  var canvas = createCanvas(128, 128);
 
   // Move the canvas so it's inside our <div>.
   canvas.parent('p5js');
 
-  //background(255, 0, 200);
-  //noStroke();
   smooth(8);
-  noStroke();
-  fill('#584d3d');
 
-
-  for(var i = 0; i < 3; i++){
-    var angle = map(i, 0.0, 3.0, 0.0, TWO_PI);
-    var size = 10;
-    var vec = createVector(angle, size);
-    vec = polarToCartesian(vec);
-    vec.x+=width/2;
-    vec.y+=height/2;
-    points[i] = vec;
+  switch(sketchChoice){
+    case 0:
+      setupZero();
+    break;
   }
 }
 
 function draw() {
   clear();
-  for(var i = 0; i < points.length; i++){
-    points[i].x += 1-random(2);
-    points[i].y += 1-random(2);
+  switch(sketchChoice){
+    case 0:
+      drawZero();
+    break;
   }
+}
 
-  for(var i = 0; i < 1; i++){
-      triangle(points[i].x, points[i].y, points[i+1].x, points[i+1].y, points[i+2].y, points[i+2].y);
+//SKETCH ZERO
+function presetupZero(){
+  points = new Array;
+  numPoints = 200;
+}
+
+
+function setupZero(){
+  stroke('#E9F1F7');
+  strokeWeight(5);
+  fill('#E9F1F7');
+
+  points = recalculatePoints(numPoints);
+}
+
+function drawZero(){
+  points = recalculatePoints(numPoints);
+  for(var i = 0; i < numPoints; i++){
+    push();
+      translate(width/2, height/2);
+      //rotate((frameCount/100.0));
+      line(points[i].x, points[i].y, points[(i+1)%numPoints].x, points[(i+1)%numPoints].y)
+      line(0.0, 0.0, points[i].x, points[i].y);
+    pop();
   }
+}
 
+//FUCNTIONS MADE FOR SKETCH ZERO
+function recalculatePoints(_size){
+  var tempArray = new Array;
+  for(var i = 0; i < _size; i++){
+    var angle = map(i, 0.0, float(_size), 0.0, TWO_PI);
+    var variance = 10*cos(10*(i/_size)*TWO_PI - frameCount/10.0);
+    //variance *= step(variance, 0);
+    var size = 50+variance;
+    size *= sin((i/_size)*2*TWO_PI);
+    var vec = createVector(angle, size);
+    vec = polarToCartesian(vec);
+    tempArray[i] = vec;
+  }
+  return tempArray;
 }
 
 function polarToCartesian(_in){
@@ -42,4 +78,11 @@ function polarToCartesian(_in){
   _out.x = _in.y * cos(_in.x);
   _out.y = _in.y * sin(_in.x);
   return _out;
+}
+
+function step(_variable, threshold){
+  if(_variable >= threshold){
+    return 1.0;
+  }
+  return 0.0;
 }
