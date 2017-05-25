@@ -38,7 +38,8 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
+  text-shadow: none;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -68,22 +69,41 @@ body {
 }
 
 .inner-cover{
+  padding: 0px;
   color: #E9F1F7;
   background-color: #584d3d;
   margin-left: auto;
   margin-right: auto;
   width: 350px;
   border-radius: 10px;
+  margin-top:0px;
 }
 
+
 .main-content{
-  padding: 30px;
+  padding: 15px;
   font-family: 'Averia Sans Libre', cursive;
 }
 
 .p5{
   padding: 0px;
 }
+
+/*headings*/
+h1{
+  font-size: 32px;
+}
+
+.cover-heading{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.lead{
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
 /*
  * Header
  */
@@ -137,6 +157,8 @@ body {
 }
 
 
+
+
 /*
  * Cover
  */
@@ -159,12 +181,17 @@ body {
   color: rgba(255,255,255,.5);
 }
 
-
+/*@media (min-height: 500px) {
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+}*/
 /*
  * Affix and center
  */
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
   /* Pull out the header and footer */
   .masthead {
     position: fixed;

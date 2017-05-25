@@ -1,6 +1,6 @@
 numOptions = 1;
 sketchChoice = Math.floor(Math.random()*numOptions);
-console.log(sketchChoice);
+
 switch(sketchChoice){
   case 0:
     presetupZero();
