@@ -38,7 +38,6 @@ body {
 body {
   color: #fff;
   text-align: center;
-  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
   text-shadow: none;
 }
 
@@ -64,8 +63,8 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
-
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .inner-cover{
@@ -107,47 +106,64 @@ h1{
 /*
  * Header
  */
+.masthead{
+
+}
+
 .masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0px;
   font-family: 'Averia Sans Libre', cursive;
   font-weight: bold;
+  background-color: #584d3d;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .masthead-nav > li {
   display: inline-block;
   font-family: 'Inconsolata', monospace;
+  margin-top: 0px;
+  padding: 10px;
 }
 
 .masthead-nav > li + li {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   font-size: 16px;
   font-weight: bold;
+  background-color: #584d3d;
   color: #E9F1F7; /* IE8 proofing */
-  color: color: #E9F1F77F;
+  color: #E9F1F77F;
   border-bottom: 2px solid transparent;
+  border-radius: 10px;
 }
 
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
-  background-color: transparent;
+  background-color: #E9F1F7;
+  color: #584d3d;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
 
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
+.masthead-nav > .active > a{
+  color: #E9F1F7;
+  background-color: #584d3d;
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  background-color: #E9F1F7;
+  color: #584d3d;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 831px) {
   .masthead-brand {
     float: left;
   }
@@ -155,8 +171,6 @@ h1{
     float: right;
   }
 }
-
-
 
 
 /*
@@ -191,7 +205,7 @@ h1{
  * Affix and center
  */
 
-@media (min-width: 768px){
+@media (min-width: 831px){
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
