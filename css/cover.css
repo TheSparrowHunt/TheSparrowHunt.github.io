@@ -110,7 +110,7 @@ h1{
 
 }
 
-.masthead-brand {
+.masthead-brand > a{
   margin: 0px;
   font-family: 'Averia Sans Libre', cursive;
   font-weight: bold;
@@ -119,10 +119,13 @@ h1{
   border-radius: 10px;
 }
 
+.masthead-nav{
+  margin-top: 20px;
+}
+
 .masthead-nav > li {
   display: inline-block;
   font-family: 'Inconsolata', monospace;
-  margin-top: 0px;
   padding: 10px;
 }
 
@@ -169,6 +172,7 @@ h1{
   }
   .masthead-nav {
     float: right;
+    margin-top: 0px;
   }
 }
 
@@ -224,6 +228,12 @@ h1{
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .masthead-brand{
+    margin-left: 10px;
+  }
+  .masthead-nav > li {
+    margin-top: 0px;
   }
 }
 
