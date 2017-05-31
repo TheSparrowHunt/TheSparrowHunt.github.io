@@ -88,11 +88,23 @@ body {
 
 .page-title{
   font-family: 'Averia Sans Libre', cursive;
+  margin: 0px;
 }
 
 .main-body{
   font-family: 'Inconsolata', monospace;
   text-align: left;
+}
+
+.main-body > p{
+  margin-top: 10px;
+}
+
+.image{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .p5{
