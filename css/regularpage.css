@@ -98,6 +98,7 @@ body {
 
 .main-body > p{
   margin-top: 10px;
+  font-size: 18px;
 }
 
 .image{
@@ -207,9 +208,10 @@ h1{
     float: right;
     margin-top: 0px;
   }
+
   /* fixes the too large margin in portrait*/
   .inner-cover{
-    margin-top: 50px;
+    margin-top: 100px;
   }
 }
 
@@ -249,7 +251,7 @@ h1{
 @media (min-width: 831px){
   /* Pull out the header and footer */
   .masthead {
-    /*position: fixed;*/
+    position: absolute;
     top: 0;
   }
   .mastfoot {
