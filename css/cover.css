@@ -119,6 +119,14 @@ h1{
   border-radius: 10px;
 }
 
+.masthead-brand > a:hover,
+.masthead-brand > a:focus {
+  background-color: #E9F1F7;
+  color: #584d3d;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
 .masthead-nav{
   margin-top: 20px;
 }
