@@ -1,20 +1,271 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #ffffff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
 body {
-  padding-top: 50px;
+  height: 100%;
+  background-image: url("../images/main-background.png");
+  background-size: 156px 135px;
+  -webkit-background-size: 156px 135px;
+  -moz-background-size: 156px 135px;
+  -o-background-size: 156px 135px;
+  /*background-color: #011627;*/
 }
 
-.starter-template {
-  padding: 40px 15px;
+body {
+  color: #fff;
   text-align: center;
+  text-shadow: none;
 }
 
-.container{
-  color: #FFF;
-  background-color:rgba(0,0,0,0.5);
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+.inner-cover{
+  padding: 0px;
+  color: #E9F1F7;
+  background-color: #584d3d;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  border-radius: 10px;
+}
+
+
+.main-content{
+  padding: 30px;
+}
+
+.title{
+  text-align: left;
+}
+
+.page-title{
+  font-family: 'Averia Sans Libre', cursive;
+}
+
+.main-body{
+  font-family: 'Inconsolata', monospace;
+  text-align: left;
+}
+
+.p5{
+  padding: 0px;
+}
+
+/*headings*/
+h1{
+  font-size: 32px;
+}
+
+.cover-heading{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.lead{
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+/*
+ * Header
+ */
+.masthead{
+
+}
+
+.masthead-brand > a{
+  margin: 0px;
+  font-family: 'Averia Sans Libre', cursive;
+  font-weight: bold;
+  background-color: #584d3d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.masthead-brand > a:hover,
+.masthead-brand > a:focus {
+  background-color: #E9F1F7;
+  color: #584d3d;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.masthead-nav{
+  margin-top: 20px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+  font-family: 'Inconsolata', monospace;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 5px;
+}
+
+.masthead-nav > li + li {
+  margin-left: 0px;
+}
+
+.masthead-nav > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #584d3d;
+  color: #E9F1F7; /* IE8 proofing */
+  color: #E9F1F77F;
+  border-bottom: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: #E9F1F7;
+  color: #584d3d;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.masthead-nav > .active > a{
+  color: #E9F1F7;
+  background-color: #584d3d;
+  border-bottom-color: #fff;
+}
+
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  background-color: #E9F1F7;
+  color: #584d3d;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 831px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+    margin-top: 0px;
+  }
+  /* fixes the too large margin in portrait*/
+  .inner-cover{
+    margin-top: 50px;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
 
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
-  text-align: center;
 }
 
+/*@media (min-height: 500px) {
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+}*/
+/*
+ * Affix and center
+ */
+
+@media (min-width: 831px){
+  /* Pull out the header and footer */
+  .masthead {
+    /*position: fixed;*/
+    top: 0;
+  }
+  .mastfoot {
+    /*position: fixed;*/
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .masthead-brand{
+    margin-left: 10px;
+  }
+  .masthead-nav > li {
+    margin-top: 0px;
+  }
+}
+
+/*@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}*/
