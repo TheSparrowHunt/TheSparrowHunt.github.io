@@ -126,7 +126,9 @@ h1{
 .masthead-nav > li {
   display: inline-block;
   font-family: 'Inconsolata', monospace;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 5px;
 }
 
 .masthead-nav > li + li {
